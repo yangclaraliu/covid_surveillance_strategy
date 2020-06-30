@@ -95,7 +95,7 @@ age_dist %>%
   group_by(CNTY_CODE) %>% 
   summarise(tot = sum(tot)) -> pop
 
-cnty <- "110100" # code for shanghai
+cnty <- "110100" # code for beijing
 age_dist_tmp <- age_dist %>% filter(CNTY_CODE == cnty) %>% pull(tot)
 pop_tmp <- pop %>% filter(CNTY_CODE == cnty)
 length(age_dist_tmp)
